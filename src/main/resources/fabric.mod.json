@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "die-and-delete",
+  "version": "${version}",
+  "name": "Die & Delete",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/die-and-delete/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "me.omrih.dieAndDelete.client.DieAndDeleteClient"
+    ],
+    "main": [
+      "me.omrih.dieAndDelete.DieAndDelete"
+    ]
+  },
+  "mixins": [
+    "die-and-delete.mixins.json",
+    {
+      "config": "die-and-delete.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
